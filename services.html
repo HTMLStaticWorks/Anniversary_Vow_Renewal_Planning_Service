@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowed | Planning Services</title>
+    <meta name="description" content="Explore our bespoke anniversary and vow renewal planning services: venue selection, floral styling, ceremony curation, and day-of coordination.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23171315'/%3E%3Cpath d='M32 46s-14-9.5-14-19a9 9 0 0 1 15-6.7A9 9 0 0 1 48 27c0 9.5-14 19-14 19z' fill='%23D4AF37'/%3E%3C/svg%3E">
+    <style>
+        .service-feature-card {
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .service-feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .service-img {
+            height: 280px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl fixed-top navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-flex align-items-center" href="index.html" style="font-family: var(--font-heading); font-size: 1.45rem; letter-spacing: 1.5px;">
+                <i class="fa-solid fa-heart me-2" style="color: var(--electric-gold);"></i>
+                <span style="color: var(--electric-gold);">VOW</span>ED
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars fs-3" style="color: var(--electric-gold);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Journal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                        <a href="contact.html" class="btn btn-premium btn-sm w-100">Plan Renewal</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 d-flex gap-3 mt-3 mt-lg-0 align-items-center">
+                        <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
+                        <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="position-relative d-flex align-items-center justify-content-center" style="height: 50vh; background: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80') no-repeat center center/cover; margin-top: 76px;">
+        <div class="hero-overlay" style="background: rgba(20, 17, 19, 0.78);"></div>
+        <div class="container position-relative z-2 text-center text-white fade-up">
+            <h1 class="hero-title mb-3" style="font-size: clamp(2.5rem, 5vw, 4rem);">Our Planning Services</h1>
+            <p class="lead text-white-50">Exquisite ceremony design, venue sourcing, and day-of direction for enduring love.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- The 3 Primary Required Services -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="section-title">The Three Pillars of Your Celebration</h2>
+                    <p class="text-muted mx-auto" style="max-width: 650px;">From the initial location scouting to the final toast, we orchestrate every nuance of your anniversary milestone.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Service 1: Venue Selection -->
+                    <div class="col-lg-4 col-md-6 fade-up">
+                        <div class="glass-card service-feature-card h-100 p-0">
+                            <img src="https://images.unsplash.com/photo-1544077960-604201fe74bc?w=800&q=80" class="service-img" alt="Luxury European Chateau Venue">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-landmark text-gold fs-4" style="color: var(--electric-gold);"></i>
+                                    <h3 class="h4 mb-0" style="font-family: var(--font-heading);">Venue Selection &amp; Sourcing</h3>
+                                </div>
+                                <p class="text-muted mb-4">We unlock private châteaux in France, cliffside terraces on the Amalfi Coast, secluded Napa vineyards, and historic coastal estates. We negotiate contracts, coordinate site visits, and ensure private intimacy.</p>
+                                <ul class="list-unstyled text-muted small mb-4 mt-auto">
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--electric-gold);"></i> Destination scouting &amp; private estate access</li>
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--electric-gold);"></i> Privacy guarantees &amp; curfew management</li>
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--electric-gold);"></i> Guest accommodation &amp; travel logistics</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-outline-premium w-100">Inquire Venue Sourcing</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Styling -->
+                    <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card service-feature-card h-100 p-0">
+                            <img src="https://images.unsplash.com/photo-1519225429980-715cb0215aed?w=800&q=80" class="service-img" alt="Floral Ceremony Arch Styling">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-gold fs-4" style="color: var(--dusty-rose);"></i>
+                                    <h3 class="h4 mb-0" style="font-family: var(--font-heading);">Artistic Styling &amp; Floral Design</h3>
+                                </div>
+                                <p class="text-muted mb-4">Transforming spaces with poetic beauty. We create custom floral ceremony canopies, gilded candlelight banquets, hand-embossed vow booklets, and romantic atmospheric lighting.</p>
+                                <ul class="list-unstyled text-muted small mb-4 mt-auto">
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--dusty-rose);"></i> Bespoke ceremony arbors &amp; floral installations</li>
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--dusty-rose);"></i> Vintage taper candle &amp; chandelier ambiance</li>
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--dusty-rose);"></i> Custom calligraphy vow books &amp; heirloom stationery</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-outline-premium w-100">Inquire Styling Design</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Coordination -->
+                    <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card service-feature-card h-100 p-0">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" class="service-img" alt="Event Coordination & Day of Direction">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-ring text-gold fs-4" style="color: var(--electric-gold);"></i>
+                                    <h3 class="h4 mb-0" style="font-family: var(--font-heading);">Coordination &amp; Day-of Direction</h3>
+                                </div>
+                                <p class="text-muted mb-4">Complete peace of mind. Our experienced directors handle vendor management, guest timelines, acoustic musicians, photography cues, and seamless ceremony pacing so you stay in the moment.</p>
+                                <ul class="list-unstyled text-muted small mb-4 mt-auto">
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--electric-gold);"></i> Dedicated on-site ceremony director &amp; team</li>
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--electric-gold);"></i> Master timeline execution &amp; music coordination</li>
+                                    <li class="mb-2"><i class="fa-solid fa-check text-gold me-2" style="color: var(--electric-gold);"></i> Vendor liaison &amp; champagne toast timing</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-outline-premium w-100">Inquire Coordination</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Tailored Experiences -->
+        <section class="section-padding" style="background: var(--primary-black); color: white;">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="section-title text-white">Curated Milestone Additions</h2>
+                    <p class="text-white-50 mx-auto" style="max-width: 600px;">Elevate your celebration with signature touches tailored to your unique love story.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 fade-up">
+                        <div class="glass-card text-center p-4 h-100">
+                            <i class="fa-solid fa-feather-pointed fs-1 mb-3" style="color: var(--electric-gold);"></i>
+                            <h4 class="h5 mb-2">Vow Writing Guidance</h4>
+                            <p class="text-white-50 small mb-0">Poetic, personalized writing sessions to help articulate decades of devotion, growth, and shared memories into timeless vows.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card text-center p-4 h-100">
+                            <i class="fa-solid fa-music fs-1 mb-3" style="color: var(--dusty-rose);"></i>
+                            <h4 class="h5 mb-2">Acoustic Strings &amp; Harp</h4>
+                            <p class="text-white-50 small mb-0">Live violinists, cellists, and classical harpists performing your personal love soundtrack as you walk down the candlelit aisle.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card text-center p-4 h-100">
+                            <i class="fa-solid fa-champagne-glasses fs-1 mb-3" style="color: var(--electric-gold);"></i>
+                            <h4 class="h5 mb-2">Private Chef &amp; Toast</h4>
+                            <p class="text-white-50 small mb-0">Michelin-trained private chef dinners with vintage wine pairings and handcrafted multi-tier heirloom cakes.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.3s;">
+                        <div class="glass-card text-center p-4 h-100">
+                            <i class="fa-solid fa-camera fs-1 mb-3" style="color: var(--dusty-rose);"></i>
+                            <h4 class="h5 mb-2">Cinematic Documentary</h4>
+                            <p class="text-white-50 small mb-0">High-definition 4K heirloom cinematography and editorial portraiture capturing your renewal for future generations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestone Anniversary Timeline -->
+        <section class="section-padding bg-light position-relative">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="section-title">Milestones We Celebrate</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Every year tells a story, and every milestone deserves its own signature tribute.</p>
+                </div>
+                
+                <div class="row g-4 text-center">
+                    <div class="col-md-3 col-6 fade-up">
+                        <div class="glass-card p-4">
+                            <h3 class="display-6 fw-bold mb-1" style="color: var(--electric-gold);">10th</h3>
+                            <h5 class="text-muted mb-2">Tin / Rose Anniversary</h5>
+                            <p class="small text-muted mb-0">Re-affirming vows as young families grow and deepen roots.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card p-4">
+                            <h3 class="display-6 fw-bold mb-1" style="color: var(--dusty-rose);">25th</h3>
+                            <h5 class="text-muted mb-2">Silver Jubilee</h5>
+                            <p class="small text-muted mb-0">A quarter-century of shared triumph, laughter, and unbreakable devotion.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card p-4">
+                            <h3 class="display-6 fw-bold mb-1" style="color: var(--electric-gold);">40th</h3>
+                            <h5 class="text-muted mb-2">Ruby Anniversary</h5>
+                            <p class="small text-muted mb-0">A rare, vibrant love celebrated with intimate elegance and luxury.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 fade-up" style="transition-delay: 0.3s;">
+                        <div class="glass-card p-4">
+                            <h3 class="display-6 fw-bold mb-1" style="color: var(--dusty-rose);">50th</h3>
+                            <h5 class="text-muted mb-2">Golden Jubilee</h5>
+                            <p class="small text-muted mb-0">A magnificent legacy honoring half a century of love surrounded by family.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Banner -->
+        <section class="section-padding position-relative text-center" style="background: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&q=80') no-repeat center center/cover; color: white;">
+            <div class="hero-overlay" style="background: rgba(20, 17, 19, 0.82);"></div>
+            <div class="container position-relative z-2 fade-up">
+                <h2 class="display-5 fw-bold mb-3" style="font-family: var(--font-heading);">Plan Your Vow Renewal With Us</h2>
+                <p class="lead mb-4 text-white-50 mx-auto" style="max-width: 600px;">Tell us about your love story, preferred destination, and dream ceremony details.</p>
+                <a href="contact.html" class="btn btn-premium px-5 py-3 fs-5">Request A Bespoke Proposal</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-uppercase fw-bold d-inline-block mb-4" href="index.html" style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 2px; color: white !important;">
+                        <i class="fa-solid fa-heart me-2" style="color: var(--electric-gold);"></i>
+                        <span style="color: var(--electric-gold);">VOW</span>ED
+                    </a>
+                    <p class="text-white-50 mb-4">Dedicated to curating breathtaking vow renewals and unforgettable anniversary celebrations worldwide.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Explore</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="pricing.html" class="footer-link">Packages</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Company</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="blog.html" class="footer-link">Journal</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Romance In Your Inbox</h5>
+                    <p class="text-white-50 small mb-3">Subscribe for vow writing inspiration, venue features, and styling advice.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="Your Email Address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-white-50 small">
+                <p class="mb-0">&copy; 2026 Vowed Planning Service. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

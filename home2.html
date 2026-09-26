@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowed | Destination Vow Renewals & Galas</title>
+    <meta name="description" content="Plan romantic destination vow renewals, private château galas, and bespoke anniversary celebrations worldwide.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        /* ── Hero title: never hyphenate or break mid-word ── */
+        .roving-title-fix, .hero-title-fix {
+            overflow-wrap: normal !important;
+            word-break: normal !important;
+            hyphens: none !important;
+        }
+
+        /* ── Roving (Villa Curation) & Ceremony sections ── */
+        @media (max-width: 1024px) {
+            .roving-align-fix .row,
+            .ceremony-align-fix .row {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .roving-align-fix .col-lg-6,
+            .ceremony-align-fix .col-lg-6 {
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .roving-align-fix .list-unstyled li,
+            .ceremony-align-fix .list-unstyled li {
+                text-align: left !important;
+                display: flex !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                gap: 0.5rem;
+            }
+
+            .roving-align-fix .glass-card,
+            .ceremony-align-fix .glass-card {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* Center the section title underline */
+            .roving-align-fix .section-title::after,
+            .ceremony-align-fix .section-title::after {
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+
+            /* Center the CTA button */
+            .roving-align-fix .btn,
+            .ceremony-align-fix .btn {
+                display: inline-block !important;
+            }
+        }
+
+        /* ── Mobile-only fixes ── */
+        @media (max-width: 767.98px) {
+            /* Hero title: shrink to fit, avoid overflow */
+            .hero-title-fix {
+                font-size: clamp(1.8rem, 7vw, 3rem) !important;
+                line-height: 1.15 !important;
+            }
+
+            /* Section titles: fit on one line */
+            .section-title {
+                font-size: clamp(1.4rem, 6vw, 2rem) !important;
+                word-break: break-word !important;
+            }
+
+            /* Milestone cards (col-md-4): full width on mobile */
+            .col-md-4 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+
+            /* Heirloom styling accents: full-width on mobile instead of 2-col */
+            .col-6.col-lg-3 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+
+            /* Glass card titles: prevent overflow */
+            .glass-card h4,
+            .glass-card h5 {
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+                hyphens: auto !important;
+            }
+
+            /* Buttons: don't overflow card */
+            .glass-card .btn {
+                white-space: normal !important;
+                word-break: break-word !important;
+                width: 100% !important;
+            }
+
+            /* Section padding: reduce on mobile */
+            .section-padding {
+                padding: 3rem 0 !important;
+            }
+
+            /* CTA section title */
+            .display-4 {
+                font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
+            }
+        }
+
+        /* ── Tablet (768px – 1024px): 2-col heirloom grid & card layout ── */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            /* Heirloom styling: 2 per row on tablet */
+            .col-6.col-lg-3 {
+                width: 50% !important;
+                max-width: 50% !important;
+                flex: 0 0 50% !important;
+            }
+
+            /* Milestone cards: 1 per row so they aren't too squished */
+            .col-md-4 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+
+            .section-title {
+                font-size: clamp(1.6rem, 4vw, 2.2rem) !important;
+            }
+        }
+
+        /* ── RTL overrides ── */
+        html[dir="rtl"] .roving-align-fix .col-lg-6,
+        html[dir="rtl"] .ceremony-align-fix .col-lg-6 {
+            text-align: right !important;
+            direction: ltr;
+        }
+
+        html[dir="rtl"] .roving-align-fix .list-unstyled li,
+        html[dir="rtl"] .ceremony-align-fix .list-unstyled li {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        html[dir="rtl"] .roving-align-fix .list-unstyled i,
+        html[dir="rtl"] .ceremony-align-fix .list-unstyled i {
+            margin: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            html[dir="rtl"] .roving-align-fix .list-unstyled li,
+            html[dir="rtl"] .ceremony-align-fix .list-unstyled li {
+                justify-content: center !important;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23171315'/%3E%3Cpath d='M32 46s-14-9.5-14-19a9 9 0 0 1 15-6.7A9 9 0 0 1 48 27c0 9.5-14 19-14 19z' fill='%23D4AF37'/%3E%3C/svg%3E">
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl fixed-top navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-flex align-items-center" href="index.html" style="font-family: var(--font-heading); font-size: 1.45rem; letter-spacing: 1.5px;">
+                <i class="fa-solid fa-heart me-2" style="color: var(--electric-gold);"></i>
+                <span style="color: var(--electric-gold);">VOW</span>ED
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars fs-3" style="color: var(--electric-gold);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="home2.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Journal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                        <a href="contact.html" class="btn btn-premium btn-sm w-100">Plan Renewal</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 d-flex gap-3 mt-3 mt-lg-0 align-items-center">
+                        <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
+                        <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Destination Theme) -->
+    <header class="hero-section" style="background: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80') no-repeat center center/cover;">
+        <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(20, 17, 19, 0.45), var(--primary-black));"></div>
+        <div class="glow-orb orb-1" style="background: var(--dusty-rose);"></div>
+        <div class="glow-orb orb-2" style="background: var(--electric-gold);"></div>
+        
+        <div class="container hero-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="hero-subtitle text-uppercase text-white" style="letter-spacing: 4px;">Milestone Journeys</h2>
+                    <h1 class="hero-title hero-title-fix" style="background: linear-gradient(to right, #fff, var(--electric-gold)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Destination Vow Renewals</h1>
+                    <p class="lead mb-5 px-md-5 text-white-50">From sun-drenched Amalfi clifftops and Tuscan vineyards to historic French châteaux, we craft transcendent vow renewal experiences for couples celebrating enduring love.</p>
+                    <div class="hero-cta d-flex gap-3 justify-content-center flex-column flex-sm-row">
+                        <a href="pricing.html" class="btn btn-premium px-5 py-3" style="background: linear-gradient(45deg, var(--electric-gold), var(--dusty-rose)); color: #171315; font-weight: 600;">View Renewal Packages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Destination Planning Module -->
+    <main>
+        <section class="section-padding bg-light position-relative z-2 roving-align-fix">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 fade-up">
+                        <h2 class="section-title roving-title-fix">Private Estate &amp; Villa Curation</h2>
+                        <p class="text-muted mb-4">Our destination planning specialists orchestrate every detail from travel logistics and private chef dinners to sunset vows overlooking breathtaking horizons.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3"><i class="fa-solid fa-heart text-gold me-2" style="color: var(--electric-gold);"></i> Exclusive access to historic châteaux and luxury private villas</li>
+                            <li class="mb-3"><i class="fa-solid fa-heart text-gold me-2" style="color: var(--electric-gold);"></i> Guest concierge, boutique accommodations, and luxury transfers</li>
+                            <li class="mb-3"><i class="fa-solid fa-heart text-gold me-2" style="color: var(--electric-gold);"></i> Multi-day celebratory itineraries &amp; intimate welcome dinners</li>
+                        </ul>
+                        <a href="services.html" class="btn btn-outline-premium">Explore Destination Services</a>
+                    </div>
+                    <div class="col-lg-6 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card p-2" style="border-radius: 20px;">
+                            <img src="https://images.unsplash.com/photo-1544077960-604201fe74bc?w=800&q=80" alt="Historic French Chateau Venue" class="img-fluid rounded" style="border-radius: 16px !important;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Romantic Ceremony Moments -->
+        <section class="section-padding ceremony-align-fix" style="background: var(--primary-black); color: white; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <div class="row align-items-center g-5 flex-row-reverse">
+                    <div class="col-lg-6 fade-up">
+                        <h2 class="section-title text-white">Candlelit Ceremony Direction</h2>
+                        <p class="text-white-50 mb-4">Reaffirm your promises under a canopy of luminous florals and soft candlelight. Our ceremony directors curate custom rituals, poetic readings, and musical harmonies.</p>
+                        <ul class="list-unstyled mb-4 text-white-50">
+                            <li class="mb-3"><i class="fa-solid fa-ring me-2" style="color: var(--electric-gold);"></i> Ring Rededication &amp; Custom Blessing Rituals</li>
+                            <li class="mb-3"><i class="fa-solid fa-music me-2" style="color: var(--electric-gold);"></i> Live Acoustic Strings or Classical Harpist</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card p-2" style="border-radius: 20px; background: rgba(212, 175, 55, 0.05); border-color: rgba(212, 175, 55, 0.2);">
+                            <img src="https://images.unsplash.com/photo-1519225429980-715cb0215aed?w=800&q=80" alt="Floral Ceremony Arbor" class="img-fluid rounded" style="border-radius: 16px !important;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Signature Anniversary Themes -->
+        <section class="section-padding bg-light position-relative">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="section-title">Milestone Celebration Styles</h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px;">Every chapter in love is unique. Explore our signature design collections crafted for meaningful anniversaries.</p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4 fade-up">
+                        <div class="glass-card h-100 p-0 overflow-hidden" style="border-radius: 22px;">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" alt="Intimate Coastal Vows" class="w-100" style="height: 240px; object-fit: cover;">
+                            <div class="p-4">
+                                <span class="badge mb-3" style="background: var(--dusty-rose); color: #fff;">10th &amp; 15th Anniversary</span>
+                                <h4 class="mb-2">Coastal Romance</h4>
+                                <p class="text-muted small mb-4">Intimate seaside arbor, acoustic guitarist, champagne toast at golden hour.</p>
+                                <a href="contact.html" class="btn btn-outline-premium w-100">Plan Coastal Vows</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card h-100 p-0 overflow-hidden" style="border-radius: 22px;">
+                            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80" alt="Silver Jubilee Celebration" class="w-100" style="height: 240px; object-fit: cover;">
+                            <div class="p-4">
+                                <span class="badge mb-3" style="background: var(--electric-gold); color: #171315;">25th Silver Jubilee</span>
+                                <h4 class="mb-2">Silver Serenade</h4>
+                                <p class="text-muted small mb-4">Vineyard courtyard dinner, silver foil stationery, multi-course wine pairing.</p>
+                                <a href="contact.html" class="btn btn-outline-premium w-100">Plan Silver Jubilee</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card h-100 p-0 overflow-hidden" style="border-radius: 22px;">
+                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Golden Jubilee Couple" class="w-100" style="height: 240px; object-fit: cover;">
+                            <div class="p-4">
+                                <span class="badge mb-3" style="background: var(--champagne-gold); color: #171315;">50th Golden Jubilee</span>
+                                <h4 class="mb-2">Golden Legacy Gala</h4>
+                                <p class="text-muted small mb-4">Château ballroom gala, three-generation family gathering, heirloom memory tribute.</p>
+                                <a href="contact.html" class="btn btn-outline-premium w-100">Plan Golden Jubilee</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mb-4 fade-up">
+                    <h3 class="h2 mb-0">Heirloom Styling Accents</h3>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3 fade-up">
+                        <div class="glass-card h-100 p-3 text-center" style="border-radius: 20px;">
+                            <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&q=80" alt="Handmade Vow Books" class="img-fluid rounded mb-3" style="height: 160px; width: 100%; object-fit: cover;">
+                            <h5 class="mb-1">Calligraphy Books</h5>
+                            <p class="text-muted small mb-0">Handmade paper vow books with gold leaf lettering.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card h-100 p-3 text-center" style="border-radius: 20px;">
+                            <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=600&q=80" alt="Champagne Tower Toast" class="img-fluid rounded mb-3" style="height: 160px; width: 100%; object-fit: cover;">
+                            <h5 class="mb-1">Champagne Tower</h5>
+                            <p class="text-muted small mb-0">Vintage coupe tower with Grand Cru vintage pours.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card h-100 p-3 text-center" style="border-radius: 20px;">
+                            <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600&q=80" alt="Floral Arrangements" class="img-fluid rounded mb-3" style="height: 160px; width: 100%; object-fit: cover;">
+                            <h5 class="mb-1">Botanical Florals</h5>
+                            <p class="text-muted small mb-0">Garden roses, eucalyptus, and organic silk draping.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 fade-up" style="transition-delay: 0.3s;">
+                        <div class="glass-card h-100 p-3 text-center" style="border-radius: 20px;">
+                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Candlelit Banquet" class="img-fluid rounded mb-3" style="height: 160px; width: 100%; object-fit: cover;">
+                            <h5 class="mb-1">Candlelit Banquet</h5>
+                            <p class="text-muted small mb-0">Taper candle tablescapes with custom gilded dinnerware.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Celebration Scales -->
+        <section class="section-padding bg-light position-relative">
+            <div class="glow-orb orb-1" style="background: var(--dusty-rose); opacity: 0.1;"></div>
+            <div class="container position-relative z-2">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="section-title">Celebrations of Every Scale</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">From secret two-person vow readings to three-day destination galas, we deliver effortless elegance.</p>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-md-4 fade-up">
+                        <div class="glass-card h-100 p-4" style="border-top: 4px solid var(--electric-gold);">
+                            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt="Intimate Elopement" class="img-fluid rounded mb-3" style="height: 170px; width: 100%; object-fit: cover;">
+                            <h4 class="mb-3">Intimate Elopements</h4>
+                            <p class="text-muted small">Just the two of you in a secluded sanctuary. Complete with bespoke vows, violin serenade, and private Michelin-starred dinner.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card h-100 p-4" style="border-top: 4px solid var(--dusty-rose);">
+                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Family Milestone Celebration" class="img-fluid rounded mb-3" style="height: 170px; width: 100%; object-fit: cover;">
+                            <h4 class="mb-3">Family Gatherings</h4>
+                            <p class="text-muted small">Surround yourselves with your children, grandchildren, and closest lifelong friends in an intimate garden or villa terrace.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card h-100 p-4" style="border-top: 4px solid var(--wine-burgundy);">
+                            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="Grand Ballroom Gala" class="img-fluid rounded mb-3" style="height: 170px; width: 100%; object-fit: cover;">
+                            <h4 class="mb-3">Grand Milestone Galas</h4>
+                            <p class="text-muted small">Honor golden and silver jubilees with a full ballroom celebration featuring live jazz orchestra, dancing, and cinematic tributes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Heritage & Memory -->
+        <section class="section-padding" style="background: var(--secondary-black); color: white;">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 fade-up">
+                        <i class="fa-solid fa-heart fs-1 mb-4" style="color: var(--electric-gold);"></i>
+                        <h2 class="section-title text-white">The Heirloom Promise</h2>
+                        <p class="text-white-50 mb-5">Your love story is a legacy. Our mission is to capture its beauty, honor its endurance, and craft a ceremony that moves every heart in the room. Each celebration is handled with discretion, deep care, and exquisite artistry.</p>
+                        <div class="d-inline-block p-1 rounded-pill" style="background: linear-gradient(90deg, var(--electric-gold), var(--dusty-rose));">
+                            <span class="d-block bg-dark text-white px-4 py-2 rounded-pill fw-bold">100% Bespoke Curation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Romance CTA -->
+        <section class="section-padding position-relative text-center romance-cta-section" style="background: linear-gradient(135deg, rgba(20, 17, 19, 0.95), rgba(212, 175, 55, 0.2)), #070707 !important; overflow: hidden;">
+            <div class="glow-orb" style="background: var(--electric-gold); opacity: 0.25; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 500px;"></div>
+            <div class="container position-relative z-2 fade-up">
+                <h2 class="display-4 fw-bold mb-4" style="font-family: var(--font-heading); color: #ffffff !important;">Begin Your Next Chapter</h2>
+                <p class="lead mb-5 mx-auto" style="max-width: 600px; color: rgba(255, 255, 255, 0.8) !important;">Connect with our celebration concierges to reserve your date and receive a tailored ceremony concept.</p>
+                <a href="contact.html" class="btn btn-premium px-5 py-3 fs-5" style="background: var(--electric-gold) !important; color: #070707 !important; border-radius: 50px; font-weight: 700; display: inline-block; box-shadow: 0 8px 25px rgba(245, 197, 66, 0.4);">Schedule Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-uppercase fw-bold d-inline-block mb-4" href="index.html" style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 2px; color: white !important;">
+                        <i class="fa-solid fa-heart me-2" style="color: var(--electric-gold);"></i>
+                        <span style="color: var(--electric-gold);">VOW</span>ED
+                    </a>
+                    <p class="text-white-50 mb-4">Dedicated to curating breathtaking vow renewals and unforgettable anniversary celebrations worldwide.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Explore</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="pricing.html" class="footer-link">Packages</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Company</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="blog.html" class="footer-link">Journal</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Romance In Your Inbox</h5>
+                    <p class="text-white-50 small mb-3">Subscribe for vow writing inspiration, venue features, and styling advice.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="Your Email Address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-white-50 small">
+                <p class="mb-0">&copy; 2026 Vowed Planning Service. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
