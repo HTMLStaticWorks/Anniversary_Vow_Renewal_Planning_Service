@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home2.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
@@ -79,7 +79,7 @@
         <!-- Blog Grid -->
         <section class="section-padding bg-light blog-card-center-fix">
             <div class="container">
-                <div class="row g-4">
+                <div class="row g-4 justify-content-center">
                     <!-- Article 1 -->
                     <div class="col-md-6 col-lg-4 fade-up">
                         <div class="glass-card h-100 d-flex flex-column p-0 overflow-hidden">
@@ -143,32 +143,32 @@
         </section>
 
         <!-- Section 2: Press & Editorial Reviews -->
-        <section class="section-padding position-relative blog-press-section" style="background: var(--primary-black); color: white;">
+        <section class="section-padding position-relative blog-press-section">
             <div class="glow-orb orb-1" style="background: var(--electric-gold); opacity: 0.1; top: 50%; left: 10%;"></div>
             <div class="container position-relative z-2">
                 <div class="text-center mb-5 fade-up">
-                    <h2 class="section-title text-white">Editorial Praise</h2>
-                    <p class="text-white-50 mx-auto" style="max-width: 600px;">What leading luxury lifestyle publications say about our anniversary curation.</p>
+                    <h2 class="section-title">Editorial Praise</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">What leading luxury lifestyle publications say about our anniversary curation.</p>
                 </div>
                 
                 <div class="row g-4">
                     <div class="col-md-6 fade-up">
                         <div class="glass-card p-4 h-100 d-flex flex-column" style="border-left: 4px solid var(--electric-gold);">
-                            <h5 class="mb-3 text-white" style="font-family: var(--font-heading);">"Setting the gold standard for luxury vow renewals worldwide."</h5>
-                            <p class="text-white-50 small mb-4 flex-grow-1">A celebration feature highlighting our bespoke French château vow renewals and personal ceremony direction.</p>
+                            <h5 class="mb-3" style="font-family: var(--font-heading);">"Setting the gold standard for luxury vow renewals worldwide."</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">A celebration feature highlighting our bespoke French château vow renewals and personal ceremony direction.</p>
                             <div class="d-flex align-items-center mt-auto">
                                 <span class="fw-bold text-uppercase small" style="color: var(--electric-gold); letter-spacing: 1px;">The Romantic Estate Review</span>
-                                <a href="contact.html" class="ms-auto text-white"><i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="contact.html" class="ms-auto press-arrow-link" style="color: var(--theme-text);"><i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 fade-up" style="transition-delay: 0.1s;">
                         <div class="glass-card p-4 h-100 d-flex flex-column" style="border-left: 4px solid var(--dusty-rose);">
-                            <h5 class="mb-3 text-white" style="font-family: var(--font-heading);">"Transforms milestone anniversaries into poetic, timeless celebrations."</h5>
-                            <p class="text-white-50 small mb-4 flex-grow-1">Recognized for innovative multi-generational anniversary galas and breathtaking candlelight dining design.</p>
+                            <h5 class="mb-3" style="font-family: var(--font-heading);">"Transforms milestone anniversaries into poetic, timeless celebrations."</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Recognized for innovative multi-generational anniversary galas and breathtaking candlelight dining design.</p>
                             <div class="d-flex align-items-center mt-auto">
                                 <span class="fw-bold text-uppercase small" style="color: var(--dusty-rose); letter-spacing: 1px;">Luxury Milestone Journal</span>
-                                <a href="contact.html" class="ms-auto text-white"><i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="contact.html" class="ms-auto press-arrow-link" style="color: var(--theme-text);"><i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -240,6 +240,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

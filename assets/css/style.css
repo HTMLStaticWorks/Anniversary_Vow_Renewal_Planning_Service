@@ -291,6 +291,26 @@ header:not(.hero-section) .hero-overlay {
   left: 0;
 }
 
+/* Center heading underline when section or container is centered */
+.text-center .section-title::after,
+.section-title.text-center::after,
+.hero-content .section-title::after,
+div[class*="text-center"] .section-title::after,
+section[class*="text-center"] .section-title::after {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+}
+
+@media (max-width: 991.98px) {
+  .section-title::after {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+
 /* Swiper */
 .swiper-slide {
   height: auto;
@@ -394,6 +414,7 @@ main:not([style*="url"]),
 
 /* Dark featured sections preserved across themes */
 .romance-cta-section,
+.ceremony-align-fix,
 section[style*="secondary-black"],
 section[style*="primary-black"] {
   background-color: var(--secondary-black) !important;
@@ -403,18 +424,37 @@ section[style*="primary-black"] {
 .romance-cta-section h2,
 .romance-cta-section .display-4,
 .romance-cta-section p,
+.romance-cta-section li,
+.romance-cta-section span,
+.ceremony-align-fix h2,
+.ceremony-align-fix .display-4,
+.ceremony-align-fix p,
+.ceremony-align-fix li,
+.ceremony-align-fix span,
 section[style*="secondary-black"] h2,
 section[style*="secondary-black"] p,
+section[style*="secondary-black"] li,
+section[style*="secondary-black"] span,
 section[style*="primary-black"] h2,
-section[style*="primary-black"] p {
+section[style*="primary-black"] p,
+section[style*="primary-black"] li,
+section[style*="primary-black"] span {
   color: #ffffff !important;
 }
 
 .romance-cta-section .lead,
 .romance-cta-section .text-white-50,
+.romance-cta-section .text-white-50 li,
+.ceremony-align-fix .lead,
+.ceremony-align-fix .text-white-50,
+.ceremony-align-fix .text-white-50 li,
+section[style*="secondary-black"] .lead,
 section[style*="secondary-black"] .text-white-50,
-section[style*="primary-black"] .text-white-50 {
-  color: rgba(255, 255, 255, 0.75) !important;
+section[style*="secondary-black"] .text-white-50 li,
+section[style*="primary-black"] .lead,
+section[style*="primary-black"] .text-white-50,
+section[style*="primary-black"] .text-white-50 li {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -482,6 +522,22 @@ p, .text-muted, label, li {
   color: var(--theme-text-muted) !important;
 }
 
+.text-white,
+.text-white li,
+.text-white p,
+.text-white span,
+ul.text-white li {
+  color: #ffffff !important;
+}
+
+.text-white-50,
+.text-white-50 li,
+.text-white-50 p,
+.text-white-50 span,
+ul.text-white-50 li {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
 .glass-card {
   background: var(--glass-bg) !important;
   border: 1px solid var(--glass-border) !important;
@@ -495,6 +551,12 @@ p, .text-muted, label, li {
 .form-control::placeholder, input::placeholder, textarea::placeholder {
   color: var(--theme-text-muted) !important;
 }
+
+select option {
+  background: var(--theme-bg);
+  color: var(--theme-text);
+}
+
 
 body.dark-mode .navbar-custom { background: rgba(7, 7, 7, 0.95) !important; }
 body:not(.dark-mode) .navbar-custom { background: rgba(248, 248, 248, 0.95) !important; }
@@ -587,4 +649,132 @@ html, body {
         padding: 1.5rem !important;
         margin-bottom: 1rem !important;
     }
+
+    /* Buttons: prevent cropping and horizontal overflow on mobile */
+    .btn-premium,
+    .btn-outline-premium {
+        max-width: 100% !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        text-align: center !important;
+    }
 }
+
+/* Package and glass card buttons at 1024px view (992px - 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .glass-card .btn-premium,
+    .glass-card .btn-outline-premium,
+    .btn-premium,
+    .btn-outline-premium {
+        font-size: 0.82rem !important;
+        letter-spacing: 0.5px !important;
+        padding: 0.75rem 0.5rem !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-premium,
+    .btn-outline-premium {
+        padding: 0.8rem 1.25rem !important;
+        font-size: 1rem !important;
+        letter-spacing: 0.5px !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        max-width: 100% !important;
+    }
+}
+
+/* FAQ Accordion Styling */
+.accordion-item {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.accordion-button {
+  color: var(--primary-black) !important;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  box-shadow: none !important;
+  padding: 1.25rem 0;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--electric-gold) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.accordion-button::after {
+  filter: brightness(0.2);
+}
+
+.accordion-body {
+  color: #444444;
+  line-height: 1.7;
+  padding: 0 0 1.25rem 0;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--electric-gold);
+  color: var(--primary-black) !important;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.4);
+}
+
+.back-to-top:hover {
+  background: #ffffff;
+  color: var(--primary-black) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 576px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+}
+
+.press-arrow-link {
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.press-arrow-link:hover {
+  color: var(--electric-gold) !important;
+  transform: translateX(4px);
+}
+
+
+

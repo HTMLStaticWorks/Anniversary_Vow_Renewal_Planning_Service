@@ -1,15 +1,113 @@
 /* RTL Support */
 html[dir="rtl"] body {
   text-align: right;
+  direction: rtl;
 }
 
+/* Navbar Brand & Logo Alignment in RTL */
+html[dir="rtl"] .navbar-brand {
+  direction: ltr !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .navbar-brand .me-2,
+html[dir="rtl"] .navbar-brand i.fa-heart {
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+/* Header & Navbar Alignment */
 html[dir="rtl"] .navbar-custom .nav-link {
   margin: 0 0.5rem;
 }
 
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html[dir="rtl"] .navbar-custom .nav-link {
+    margin: 0 0.2rem !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.5px !important;
+  }
+}
+
+/* Desktop Navbar nav alignment */
+@media (min-width: 1200px) {
+  html[dir="rtl"] .navbar-expand-xl .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  html[dir="rtl"] .navbar-expand-xl .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  html[dir="rtl"] .navbar-expand-xl .navbar-nav .nav-item.ms-lg-3 {
+    margin-right: 1rem !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Mobile & Tablet Navbar drawer */
+@media (max-width: 1199.98px) {
+  html[dir="rtl"] .navbar-collapse {
+    text-align: right;
+  }
+
+  html[dir="rtl"] .navbar-collapse .navbar-nav {
+    align-items: flex-start !important;
+  }
+
+  html[dir="rtl"] .navbar-collapse .navbar-nav .nav-item {
+    width: 100%;
+    text-align: right;
+  }
+
+  html[dir="rtl"] .navbar-collapse .navbar-nav .nav-item.ms-lg-3 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  html[dir="rtl"] .navbar-collapse .navbar-nav .nav-link {
+    text-align: right;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Header / Hero Section Content Alignment */
+html[dir="rtl"] header.hero-section,
+html[dir="rtl"] header.position-relative {
+  text-align: center;
+}
+
+html[dir="rtl"] .hero-subtitle,
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .hero-desc {
+  text-align: center;
+}
+
+/* UI Elements & Decorative */
 html[dir="rtl"] .section-title::after {
   left: auto;
   right: 0;
+}
+
+html[dir="rtl"] .text-center .section-title::after,
+html[dir="rtl"] .section-title.text-center::after,
+html[dir="rtl"] div[class*="text-center"] .section-title::after,
+html[dir="rtl"] section[class*="text-center"] .section-title::after {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+}
+
+@media (max-width: 991.98px) {
+  html[dir="rtl"] .section-title::after {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
 }
 
 html[dir="rtl"] .btn-premium::before {
@@ -24,6 +122,7 @@ html[dir="rtl"] .footer-link:hover {
   transform: translateX(-5px);
 }
 
+/* RTL Spacing & Utility Classes */
 html[dir="rtl"] .ms-auto {
   margin-left: 0 !important;
   margin-right: auto !important;
@@ -32,16 +131,63 @@ html[dir="rtl"] .me-auto {
   margin-right: 0 !important;
   margin-left: auto !important;
 }
-html[dir="rtl"] .ps-0 {
-  padding-right: 0 !important;
-}
-html[dir="rtl"] .pe-0 {
-  padding-left: 0 !important;
-}
-html[dir="rtl"] .text-md-start {
-  text-align: right !important;
+
+html[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+html[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+html[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+html[dir="rtl"] .ms-4 { margin-left: 0 !important; margin-right: 1.5rem !important; }
+html[dir="rtl"] .ms-5 { margin-left: 0 !important; margin-right: 3rem !important; }
+
+html[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+html[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+html[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+html[dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+html[dir="rtl"] .me-5 { margin-right: 0 !important; margin-left: 3rem !important; }
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .ms-lg-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+  html[dir="rtl"] .ms-lg-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+  html[dir="rtl"] .ms-lg-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+  html[dir="rtl"] .ms-lg-4 { margin-left: 0 !important; margin-right: 1.5rem !important; }
+  html[dir="rtl"] .ms-lg-5 { margin-left: 0 !important; margin-right: 3rem !important; }
+  html[dir="rtl"] .ms-lg-auto { margin-left: 0 !important; margin-right: auto !important; }
+
+  html[dir="rtl"] .me-lg-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+  html[dir="rtl"] .me-lg-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+  html[dir="rtl"] .me-lg-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+  html[dir="rtl"] .me-lg-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+  html[dir="rtl"] .me-lg-5 { margin-right: 0 !important; margin-left: 3rem !important; }
+  html[dir="rtl"] .me-lg-auto { margin-right: 0 !important; margin-left: auto !important; }
 }
 
-html[dir="rtl"] header {
-  direction: ltr !important;
+@media (min-width: 1200px) {
+  html[dir="rtl"] .ms-xl-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+  html[dir="rtl"] .ms-xl-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+  html[dir="rtl"] .ms-xl-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+  html[dir="rtl"] .ms-xl-auto { margin-left: 0 !important; margin-right: auto !important; }
+
+  html[dir="rtl"] .me-xl-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+  html[dir="rtl"] .me-xl-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+  html[dir="rtl"] .me-xl-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+  html[dir="rtl"] .me-xl-auto { margin-right: 0 !important; margin-left: auto !important; }
 }
+
+html[dir="rtl"] .ps-0 { padding-right: 0 !important; }
+html[dir="rtl"] .pe-0 { padding-left: 0 !important; }
+html[dir="rtl"] .text-md-start { text-align: right !important; }
+html[dir="rtl"] .text-start { text-align: right !important; }
+html[dir="rtl"] .text-end { text-align: left !important; }
+
+/* Back to Top RTL */
+html[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+@media (max-width: 576px) {
+  html[dir="rtl"] .back-to-top {
+    right: auto;
+    left: 20px;
+  }
+}
+
