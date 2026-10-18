@@ -2,17 +2,23 @@
 @import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
 
 :root {
+  /* Brand Colors: Strictly Primary (Gold) and Secondary (Dusty Rose) */
+  --primary-color: #F5C542;
+  --secondary-color: #C27685;
+  --electric-gold: var(--primary-color);
+  --dusty-rose: var(--secondary-color);
   --primary-black: #070707;
   --secondary-black: #121212;
-  --electric-gold: #F5C542;
-  --neon-purple: #7B2FF7;
-  --royal-crimson: #D72638;
-  --led-cyan: #00E5FF;
-  --fire-orange: #FF6B00;
   --platinum-white: #F8F8F8;
-  --dusty-rose: #C27685;
-  --wine-burgundy: #912A3E;
-  --champagne-gold: #E5C578;
+
+  /* Aliases strictly harmonized with Primary and Secondary colors */
+  --champagne-gold: var(--primary-color);
+  --wine-burgundy: var(--secondary-color);
+  --royal-crimson: var(--secondary-color);
+  --neon-purple: var(--secondary-color);
+  --led-cyan: var(--primary-color);
+  --fire-orange: var(--primary-color);
+  --sage-green: var(--secondary-color);
   
   --font-heading: 'Clash Display', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -251,7 +257,8 @@ header:not(.hero-section) .hero-overlay {
 .orb-1 {
   width: 300px;
   height: 300px;
-  background: var(--neon-purple);
+  background: var(--primary-color);
+  opacity: 0.2;
   top: 10%;
   left: 20%;
   animation: float 10s infinite ease-in-out alternate;
@@ -259,10 +266,21 @@ header:not(.hero-section) .hero-overlay {
 .orb-2 {
   width: 400px;
   height: 400px;
-  background: var(--led-cyan);
+  background: var(--secondary-color);
+  opacity: 0.2;
   bottom: -10%;
   right: 10%;
   animation: float 12s infinite ease-in-out alternate-reverse;
+}
+
+/* Primary & Secondary Color Utilities */
+.text-warning,
+.text-gold {
+  color: var(--primary-color) !important;
+}
+
+.text-rose {
+  color: var(--secondary-color) !important;
 }
 
 @keyframes float {

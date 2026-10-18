@@ -28,12 +28,42 @@
 
         .gallery-swiper .package-card {
             width: 100%;
+            background: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
         .gallery-swiper .package-card-body {
             display: flex;
             flex-direction: column;
             flex: 1;
+            background: #ffffff !important;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+        }
+
+        .gallery-swiper .package-card h4,
+        .gallery-swiper .package-card .package-title {
+            color: var(--primary-black) !important;
+        }
+
+        .gallery-swiper .package-card p,
+        .gallery-swiper .package-card .package-desc {
+            color: #555555 !important;
+        }
+
+        .gallery-swiper .package-card .package-price {
+            color: var(--electric-gold) !important;
+        }
+
+        .gallery-swiper .package-card .btn-outline-premium {
+            color: var(--primary-black) !important;
+            border-color: var(--electric-gold) !important;
+        }
+
+        .gallery-swiper .package-card .btn-outline-premium:hover {
+            color: var(--primary-black) !important;
+            background: var(--electric-gold) !important;
         }
 
         .gallery-swiper .package-actions {
@@ -78,11 +108,11 @@
                     <li class="nav-item ms-lg-3 my-2 my-lg-0">
                         <a href="contact.html" class="btn btn-premium btn-sm w-100">Plan Renewal</a>
                     </li>
-                    <li class="nav-item ms-lg-3 d-flex gap-3 mt-3 mt-lg-0 align-items-center">
-                        <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
-                        <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
-                    </li>
                 </ul>
+                <div class="d-flex gap-3 mt-3 mt-lg-0 align-items-center ms-lg-3">
+                    <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
+                    <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -128,7 +158,7 @@
                     </div>
                     <div class="col-md-4 fade-up" style="transition-delay: 0.1s;">
                         <div class="glass-card">
-                            <i class="fa-solid fa-wand-magic-sparkles fs-1 mb-3" style="color: var(--dusty-rose);"></i>
+                            <i class="fa-solid fa-wand-magic-sparkles fs-1 mb-3" style="color: var(--electric-gold);"></i>
                             <h3 class="h4 mb-3">Artistic Styling & Florals</h3>
                             <p class="text-muted mb-4">Lush floral ceremony arches, soft candlelight tablescapes, custom vow books, and vintage champagne towers created with poetic attention to detail.</p>
                             <a href="services.html" class="text-decoration-none fw-bold mt-auto" style="color: var(--electric-gold);">View Styling <i class="fa-solid fa-arrow-right ms-1"></i></a>
@@ -153,7 +183,7 @@
                 <div class="d-flex justify-content-between align-items-end mb-5 fade-up">
                     <div>
                         <h2 class="section-title text-white mb-2">Signature Vow Packages</h2>
-                        <p class="text-white-50 mb-0">From intimate elopements to grand anniversary galas.</p>
+                        <p class="text-white-50 mb-0 pt-3">From intimate elopements to grand anniversary galas.</p>
                     </div>
                     <div class="d-none d-md-flex gap-2">
                         <button class="btn btn-outline-light rounded-circle swiper-prev p-0 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;"><i class="fa-solid fa-arrow-left"></i></button>
@@ -165,9 +195,9 @@
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
-                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: #ffffff; border: 1px solid rgba(255,255,255,0.2); border-radius: 24px;">
                                 <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Intimate Romance Vow Renewal Package" style="background-color: #222;">
+                                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Intimate Romance Vow Renewal Package" style="background-color: #f0f0f0;">
                                     <div class="position-absolute top-0 start-0 p-3">
                                         <span class="badge" style="background: var(--electric-gold); color: #000;">Intimate &amp; Romantic</span>
                                     </div>
@@ -175,12 +205,12 @@
                                 <div class="p-4 package-card-body">
                                     <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
                                         <div>
-                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Silver Romance</h4>
-                                            <p class="text-white-50 small mb-0">For 2 to 15 Guests | Intimate Gathering</p>
+                                            <h4 class="mb-1 text-dark package-title" style="font-family: var(--font-heading);">Silver Romance</h4>
+                                            <p class="small mb-0 text-muted package-desc">For 2 to 15 Guests | Intimate Gathering</p>
                                         </div>
-                                        <span class="text-white-50 small text-end fw-bold" style="color: var(--electric-gold) !important;">From $2,400</span>
+                                        <span class="small text-end fw-bold package-price" style="color: var(--electric-gold) !important;">From $2,400</span>
                                     </div>
-                                    <p class="text-white-50 small mb-4">Intimate ceremony in scenic gardens or beachfront, handcrafted floral arch, personal vow keepsakes, vintage champagne toast, and private acoustic violin serenade.</p>
+                                    <p class="small mb-4 text-muted package-desc">Intimate ceremony in scenic gardens or beachfront, handcrafted floral arch, personal vow keepsakes, vintage champagne toast, and private acoustic violin serenade.</p>
                                     <div class="d-flex flex-wrap gap-2 package-actions">
                                         <a href="contact.html" class="btn btn-premium btn-sm">Inquire Silver Romance</a>
                                         <a href="pricing.html" class="btn btn-outline-premium btn-sm">Package Details</a>
@@ -190,9 +220,9 @@
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: #ffffff; border: 1px solid rgba(255,255,255,0.2); border-radius: 24px;">
                                 <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Golden Promise Milestone Package" style="background-color: #333;">
+                                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Golden Promise Milestone Package" style="background-color: #f0f0f0;">
                                     <div class="position-absolute top-0 start-0 p-3">
                                         <span class="badge" style="background: var(--dusty-rose); color: #fff;">Most Popular Choice</span>
                                     </div>
@@ -200,12 +230,12 @@
                                 <div class="p-4 package-card-body">
                                     <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
                                         <div>
-                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Golden Promise</h4>
-                                            <p class="text-white-50 small mb-0">For 15 to 50 Guests | Milestone Renewal</p>
+                                            <h4 class="mb-1 text-dark package-title" style="font-family: var(--font-heading);">Golden Promise</h4>
+                                            <p class="small mb-0 text-muted package-desc">For 15 to 50 Guests | Milestone Renewal</p>
                                         </div>
-                                        <span class="text-white-50 small text-end fw-bold" style="color: var(--electric-gold) !important;">From $5,800</span>
+                                        <span class="small text-end fw-bold package-price" style="color: var(--electric-gold) !important;">From $5,800</span>
                                     </div>
-                                    <p class="text-white-50 small mb-4">Full private estate venue coordination, luxury candlelit dining setup, complete floral installations, 4K romantic cinematic film, and dedicated day-of event director.</p>
+                                    <p class="small mb-4 text-muted package-desc">Full private estate venue coordination, luxury candlelit dining setup, complete floral installations, 4K romantic cinematic film, and dedicated day-of event director.</p>
                                     <div class="d-flex flex-wrap gap-2 package-actions">
                                         <a href="contact.html" class="btn btn-premium btn-sm">Inquire Golden Promise</a>
                                         <a href="pricing.html" class="btn btn-outline-premium btn-sm">Package Details</a>
@@ -215,22 +245,22 @@
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
-                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: #ffffff; border: 1px solid rgba(255,255,255,0.2); border-radius: 24px;">
                                 <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Destination Serenade Vow Renewal" style="background-color: #444;">
+                                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Destination Serenade Vow Renewal" style="background-color: #f0f0f0;">
                                     <div class="position-absolute top-0 start-0 p-3">
-                                        <span class="badge" style="background: var(--wine-burgundy); color: #fff;">Destination Elegance</span>
+                                        <span class="badge" style="background: var(--electric-gold); color: #000;">Destination Elegance</span>
                                     </div>
                                 </div>
                                 <div class="p-4 package-card-body">
                                     <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
                                         <div>
-                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Destination Serenade</h4>
-                                            <p class="text-white-50 small mb-0">Vineyard, Villa or Coastal Retreat</p>
+                                            <h4 class="mb-1 text-dark package-title" style="font-family: var(--font-heading);">Destination Serenade</h4>
+                                            <p class="small mb-0 text-muted package-desc">Vineyard, Villa or Coastal Retreat</p>
                                         </div>
-                                        <span class="text-white-50 small text-end fw-bold" style="color: var(--electric-gold) !important;">From $8,500</span>
+                                        <span class="small text-end fw-bold package-price" style="color: var(--electric-gold) !important;">From $8,500</span>
                                     </div>
-                                    <p class="text-white-50 small mb-4">Curated vow renewal in world-class destinations with guest travel concierge, multi-day celebration itineraries, sunset catamaran reception, and breathtaking photography.</p>
+                                    <p class="small mb-4 text-muted package-desc">Curated vow renewal in world-class destinations with guest travel concierge, multi-day celebration itineraries, sunset catamaran reception, and breathtaking photography.</p>
                                     <div class="d-flex flex-wrap gap-2 package-actions">
                                         <a href="contact.html" class="btn btn-premium btn-sm">Inquire Destination</a>
                                         <a href="pricing.html" class="btn btn-outline-premium btn-sm">Package Details</a>
@@ -240,22 +270,22 @@
                         </div>
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
-                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                            <div class="glass-card package-card h-100 p-0 overflow-hidden" style="background: #ffffff; border: 1px solid rgba(255,255,255,0.2); border-radius: 24px;">
                                 <div class="position-relative">
-                                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Diamond Legacy Gala Package" style="background-color: #555;">
+                                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80" class="w-100 object-fit-cover" height="320" alt="Diamond Legacy Gala Package" style="background-color: #f0f0f0;">
                                     <div class="position-absolute top-0 start-0 p-3">
-                                        <span class="badge" style="background: var(--electric-gold); color: #000;">Grand Celebration</span>
+                                        <span class="badge" style="background: var(--dusty-rose); color: #fff;">Grand Celebration</span>
                                     </div>
                                 </div>
                                 <div class="p-4 package-card-body">
                                     <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
                                         <div>
-                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Diamond Legacy Gala</h4>
-                                            <p class="text-white-50 small mb-0">For 50+ Guests | Grand Anniversary Gala</p>
+                                            <h4 class="mb-1 text-dark package-title" style="font-family: var(--font-heading);">Diamond Legacy Gala</h4>
+                                            <p class="small mb-0 text-muted package-desc">For 50+ Guests | Grand Anniversary Gala</p>
                                         </div>
-                                        <span class="text-white-50 small text-end fw-bold" style="color: var(--electric-gold) !important;">Bespoke Quote</span>
+                                        <span class="small text-end fw-bold package-price" style="color: var(--electric-gold) !important;">Bespoke Quote</span>
                                     </div>
-                                    <p class="text-white-50 small mb-4">Palatial ballroom styling, live chamber string quartet, vintage champagne tower, bespoke heritage video documentary, multi-tier anniversary cake, and white-glove service.</p>
+                                    <p class="small mb-4 text-muted package-desc">Palatial ballroom styling, live chamber string quartet, vintage champagne tower, bespoke heritage video documentary, multi-tier anniversary cake, and white-glove service.</p>
                                     <div class="d-flex flex-wrap gap-2 package-actions">
                                         <a href="contact.html" class="btn btn-premium btn-sm">Inquire Diamond Legacy</a>
                                         <a href="pricing.html" class="btn btn-outline-premium btn-sm">Package Details</a>
